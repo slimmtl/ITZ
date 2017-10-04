@@ -1,7 +1,7 @@
-Interzone Core staging tree 1.5
+Interzone Core staging tree 1.5.1.2
 ===============================
 
-http://www.interzone.org
+https://interzone.space
 
 Copyright (c) 2009-2015 Bitcoin Core Developers
 
@@ -21,8 +21,11 @@ are carried out collectively by the network. Interzone Core is the name of open
 source software which enables the use of this token.
 
 For more information, as well as an immediately useable, binary version of
-the Interzone Core software, see http://www.interzone.org/
+the Interzone client, see https://interzone.space
 
+Interzone is a community based project and there are no "Core Developers" in the traditional
+sense. Anyone is invited to submit code improvements or features. Please see CONTRIBUTING.md
+for more information on how to fork and submit pull requests.
 
 License
 -------
@@ -64,8 +67,9 @@ to see it.
 
 **testnet and regtest modes**
 
-Run with the -testnet option to run with "play interzones" on the test network, if you
-are testing multi-machine code that needs to operate across the internet.
+Run with the -testnet option to run with "testinterzone" on the test network, if you
+are testing multi-machine code that needs to operate across the internet. You can also
+find a fully working testnet-only client at http://test.interzone.space
 
 If you are testing something that can run on one machine, run with the -regtest option.
 In regression test mode blocks can be created on-demand; see qa/rpc-tests/ for tests
