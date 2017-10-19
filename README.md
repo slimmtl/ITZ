@@ -1,4 +1,4 @@
-Interzone Core staging tree 1.5.1.2
+Interzone Core staging tree 1.5.2
 ===============================
 
 https://interzone.space
@@ -33,6 +33,10 @@ License
 Interzone Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see http://opensource.org/licenses/MIT.
 
+By using Interzone, the Interzone Network, or the Interzone Client you are accepting 100% liability and responsibility
+for your ITZ and ITZ network connections. The project team for Interzone does not market or warranty Interzone and 
+will make no claims or promises for future use or value. By utilizing the ITZ client, you acknowledge that this is 
+experimental software and that you are realizing the risks and rewards inherent in using crypto-tokens.
 
 Building process
 -----------------
