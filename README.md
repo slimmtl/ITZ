@@ -1,4 +1,4 @@
-Interzone Core staging tree 1.5.2
+Interzone Core staging tree 1.5.2.1
 ===============================
 
 https://interzone.space
@@ -7,7 +7,7 @@ Copyright (c) 2009-2015 Bitcoin Core Developers
 
 Copyright (c) 2014-2015 Dash Core Developers
 
-Copyright (c) 2017-2018 Interzone Core Developers
+Copyright (c) 2017-2018 Interzone Developers
 
 
 
