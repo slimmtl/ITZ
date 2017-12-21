@@ -69,18 +69,10 @@ public:
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,28 + 128);            // Interzone private keys start with '7' or 'X'
-        //base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x02)(0xFE)(0x52)(0xF8); // Interzone BIP32 pubkeys start with 'drkv'
-        //base58Prefixes[EXT_SECRET_KEY] = list_of(0x02)(0xFE)(0x52)(0xCC); // Interzone BIP32 prvkeys start with 'drkp'
-        //base58Prefixes[EXT_COIN_TYPE]  = list_of(0x80000005);             // Interzone BIP44 coin type is '5'
-
-        // Convert the pnSeeds array into usable address objects.
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,28 + 128);            
+        
         for (unsigned int i = 0; i < ARRAYLEN(pnSeed); i++)
         {
-            // It'll only connect to one or two seed nodes because once it connects,
-            // it'll get a pile of addresses with newer timestamps.
-            // Seed nodes are given a random 'last seen time' of between one and two
-            // weeks ago.
             const int64_t nOneWeek = 7*24*60*60;
             struct in_addr ip;
             memcpy(&ip, &pnSeed[i], sizeof(ip));
@@ -109,9 +101,6 @@ static CMainParams mainParams;
 class CTestNetParams : public CMainParams {
 public:
     CTestNetParams() {
-        // The message start string is designed to be unlikely to occur in normal data.
-        // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
-        // a large 4-byte int at any alignment.
         pchMessageStart[0] = 0xfb;
         pchMessageStart[1] = 0xc2;
         pchMessageStart[2] = 0x11;
@@ -123,7 +112,6 @@ public:
         nRPCPort = 21818;
         strDataDir = "testnet";
 
-        // Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1503324223;
         genesis.nNonce = 1088722;
 
@@ -164,9 +152,8 @@ public:
         strDataDir = "regtest";
 
         hashGenesisBlock = genesis.GetHash();
-        // assert(hashGenesisBlock == uint256("0x000008ca1832a4baf228eb1553c03d3a2c8e02399550dd6ea8d65cec3ef23d2e"));
-
-        vSeeds.clear();  // Regtest mode doesn't have any DNS seeds.
+        
+        vSeeds.clear();  
     }
 
     virtual bool RequireRPCPassword() const { return false; }
